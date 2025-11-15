@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TS Hub - Secure Login</title>
+<style>
+/* ---------- Global ---------- */
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif; }
+body { background: #0f0f1e; color:#fff; display:flex; justify-content:center; align-items:center; min-height:100vh; }
+
+/* ---------- Container ---------- */
+.container { display:flex; flex-wrap: wrap; justify-content: center; align-items: center; max-width: 500px; padding: 20px; margin-top: 30px; }
+
+/* ---------- Left Side: Info ---------- */
+.info { flex:1 1 400px; padding:40px; text-align:left; }
+.info .logo { font-size:2.2em; font-weight:bold; margin-bottom:20px; color:#1DB954; }
+.info h2 { margin-bottom:15px; font-size:1.8em; }
+.info p { color:#aaa; margin-bottom:30px; line-height:1.4; }
+.info .testimonial { background: rgba(255,255,255,0.05); padding:20px; border-radius:12px; margin-bottom:15px; box-shadow:0 0 15px rgba(29,185,84,0.2); }
+.info .testimonial p { font-size:0.95em; color:#ccc; }
+.info .testimonial h4 { color:#fff; margin-top:10px; font-weight:bold; }
+
+/* ---------- Right Side: Form ---------- */
+.form-card { 
+  flex:1 1 350px; 
+  background: #1a1a2e; /* glass effect */ 
+  backdrop-filter: blur(15px); 
+  padding:50px 40px; 
+  border-radius:20px; 
+
+  display:flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  border: 1px solid rgba(255,255,255,0.2);
+  max-height: 650px;
+}
+
+.form-card h1 { text-align:center; margin-bottom:20px; font-size:2em; }
+.form-card p { text-align:center; color:#aaa; margin-bottom:25px; font-size:0.95em; }
+
+/* ---------- Inputs ---------- */
+input { 
+  width:100%; 
+  padding:15px; 
+  margin:12px 0; 
+  border:1px solid rgba(255,255,255,0.3); 
+  border-radius:12px; 
+  background: rgba(255,255,255,0.05); 
+  color:#fff; 
+  font-size:1em; 
+  backdrop-filter: blur(10px);
+}
+input::placeholder { color:#aaa; }
+
+/* ---------- VIP Gradient Button ---------- */
+button { 
+  width:100%; 
+  padding:16px; 
+  margin-top:20px; 
+  border:none; 
+  border-radius:12px; 
+  background: linear-gradient(135deg, #ffc107,#e2aa02); 
+  color:#000000; 
+  font-weight:bold; 
+  font-size:1em; 
+  cursor:pointer; 
+  transition:0.4s; 
+ 
+}
+
+button:hover { 
+  background: linear-gradient(135deg, #ffc107,#e2aa02); 
+  color:#000; 
+   box-shadow: 0 10px 30px rgba(255, 193, 7, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ---------- Links ---------- */
+.text-center { text-align:center; margin-top:20px; font-size:0.95em; }
+.text-center a { color:#1DB954; text-decoration:none; }
+.text-center a:hover { text-decoration:underline; }
+
+/* ---------- Divider ---------- */
+.divider { display:flex; align-items:center; text-align:center; margin:20px 0; }
+.divider::before, .divider::after { content: ''; flex:1; border-bottom:1px solid #444; }
+.divider:not(:empty)::before { margin-right:.75em; }
+.divider:not(:empty)::after { margin-left:.75em; }
+.divider span { color:#aaa; font-size:0.9em; }
+
+/* ---------- Security Message ---------- */
+.security { text-align:center; color:#ccc; font-size:0.85em; margin-top:10px; }
+
+/* ---------- Responsive ---------- */
+@media(max-width:900px){ 
+  .container { flex-direction:column; align-items:center; } 
+  .info,.form-card { flex:1 1 100%; margin-bottom:30px; text-align:center;} 
+  .info { order:2; } 
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  
+
+  <!-- Right Side: Login Form -->
+  <div class="form-card">
+    <h1 style="color: #ffc107;">Login</h1>
+    <p>Access your account to start creating & earning</p>
+
+    <form>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="divider"><span>or</span></div>
+
+    <button onclick="window.location.href='signup.html'">Create Account</button>
+
+
+    <div class="text-center">
+      <p>Forgot password? <a href="/reset.html" style="color: #ffc107;">Reset</a></p>
+    </div>
+
+    <div class="security">
+      🔒 Secure Login — Your data is protected
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

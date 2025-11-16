@@ -26,10 +26,12 @@ body {
 }
 
 .navbar {
-    background: rgba(15, 15, 30, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 1rem 0;
+    background: transparent !important;
+    backdrop-filter: blur(15px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    margin: 10px 30px;
+
 }
 
 .navbar-brand {

@@ -1,0 +1,207 @@
+:root {
+    --primary-yellow: #ffc107;
+    --neon-blue: #00d4ff;
+    --neon-purple: #b537f2;
+    --dark-bg: #0f0f1e;
+    --dark-card: #1a1a2e;
+    --dark-lighter: #252541;
+    --text-light: #ffffff;
+    --text-gray: #b0b0c8;
+    --success-green: #00ff88;
+    --gradient-primary: linear-gradient(135deg, var(--primary-yellow), #ff9800);
+    --gradient-neon: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+}
+
+/* ---------- Global ---------- */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    display:flex;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+.main-content {
+    flex:1;
+    padding:2rem;
+}
+
+/* ---------- TOPBAR ---------- */
+.topbar {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:2rem;
+}
+
+.topbar h1 {
+    font-size:1.8rem;
+}
+
+.topbar .user-info {
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+
+.topbar .user-info img {
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:2px solid var(--primary-yellow);
+}
+
+/* ---------- CARDS ---------- */
+.cards {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap:1.5rem;
+    margin-bottom:2rem;
+}
+
+.card {
+    background: var(--dark-lighter);
+    border-radius:15px;
+    padding:1.5rem;
+    position:relative;
+    overflow:hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,212,255,0.3);
+}
+
+.card i {
+    font-size:2rem;
+    color: var(--neon-blue);
+    margin-bottom:0.5rem;
+}
+
+.card h3 {
+    font-size:1.2rem;
+    margin-bottom:0.5rem;
+    color: var(--text-gray);
+}
+
+.card p {
+    font-size:1.5rem;
+    font-weight:700;
+}
+
+/* ---------- PROGRESS BAR ---------- */
+.progress-container {
+    margin-top:1rem;
+}
+
+.progress-bar {
+    background: var(--dark-card);
+    border-radius:20px;
+    height:20px;
+    overflow:hidden;
+}
+
+.progress-fill {
+    height:100%;
+    width:70%; /* dynamic value */
+    background: var(--gradient-primary);
+    border-radius:20px;
+    text-align:right;
+    padding-right:0.5rem;
+    line-height:20px;
+    font-size:0.8rem;
+    font-weight:600;
+}
+
+/* ---------- ACHIEVEMENTS ---------- */
+.achievements {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+    gap:1rem;
+}
+
+.achievement-item {
+    background: var(--dark-card);
+    padding:1rem;
+    border-radius:15px;
+    text-align:center;
+    transition: transform 0.3s;
+    cursor:pointer;
+    opacity:0.5;
+}
+
+.achievement-item.unlocked {
+    opacity:1;
+    background: var(--gradient-neon);
+}
+
+.achievement-item i {
+    font-size:1.5rem;
+    margin-bottom:0.5rem;
+    display:block;
+}
+
+.achievement-item span {
+    font-size:0.85rem;
+}
+
+/* ---------- REFERRAL PANEL ---------- */
+.referral-panel {
+    margin-top:2rem;
+    background: var(--dark-lighter);
+    padding:1rem 1.5rem;
+    border-radius:15px;
+}
+
+.referral-panel .referral-input {
+    display:flex;
+    gap:0.5rem;
+}
+
+.referral-panel input {
+    width:80%;
+    padding:0.6rem 1rem;
+    border-radius:10px;
+    border:none;
+    background: var(--dark-card);
+    color: var(--text-light);
+}
+
+.referral-panel button {
+    padding:0.6rem 1rem;
+    border:none;
+    border-radius:10px;
+    background: var(--gradient-primary);
+    color: var(--dark-bg);
+    cursor:pointer;
+    transition:all 0.3s;
+}
+
+.referral-panel button:hover {
+    transform: scale(1.05);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:768px){
+    .main-content{
+        margin-left:0;
+        padding:1rem;
+    }
+    .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:1rem;
+    }
+    .cards{
+        grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    }
+}

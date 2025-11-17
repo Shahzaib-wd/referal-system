@@ -15,14 +15,16 @@
     <h1 class="highlight">Create Account</h1>
     <p>Start earning instantly with RewardZone</p>
 
-    <form>
-      <input type="text" placeholder="Username" required>
-      <input type="email" placeholder="Email" required>
-      <input type="number" placeholder="Phone-Number" required>
-      <input type="password" placeholder="Password" required>
-      <input type="text" placeholder="Referral Code ">
-      <button type="submit">Signup</button>
-    </form>
+<!-- rename signup.html to signup.php -->
+<form action="signup_process.php" method="POST">
+  <input type="text" name="username" placeholder="Username" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="tel" name="phone" placeholder="Phone Number" required>
+  <input type="password" name="password" placeholder="Password" required>
+  <input type="text" name="referral" placeholder="Referral Code">
+  <button type="submit">Signup</button>
+</form>
+
 
     <div class="text-center">
       <p>Already have an account? <a href="login.html" class="highlight-link">Login</a></p>

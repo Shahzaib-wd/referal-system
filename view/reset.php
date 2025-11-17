@@ -15,13 +15,14 @@
     <h1 class="highlight">Forget Password</h1>
     <p>Enter your email to receive a reset link</p>
 
-    <form onsubmit="event.preventDefault(); alert('Check your email for reset link');">
-      <input type="email" placeholder="Registered Email" required>
-      <button type="submit">Send Reset Link</button>
-    </form>
+  <form action="reset_process.php" method="POST">
+    <input type="email" name="email" placeholder="Registered Email" required>
+    <button type="submit">Send Reset Link</button>
+  </form>
+
 
     <div class="text-center">
-      <p>Remembered your password? <a href="login.html" class="highlight-link">Login</a></p>
+      <p>Remembered your password? <a href="login.php" class="highlight-link">Login</a></p>
     </div>
 
     <div class="security">

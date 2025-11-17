@@ -1,3 +1,7 @@
+<?php
+session_start(); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +27,9 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="earn.html">Earn now</a></li>
                     <li class="nav-item"><a class="nav-link" href="wallet.html">Wallet</a></li>
-                    <li class="nav-item"><a class="nav-link btn-login" href="login.html">Login</a></li>
+                    <?php if(!isset($_SESSION['user_id'])): ?>
+                    <li class="nav-item"><a class="nav-link btn-login" href="/view/login.php">Login</a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
@@ -51,9 +57,11 @@
                         Safe, Secure & Instant Rewards. Buy Packs & Start Earning Today.
                     </p>
                     <div class="hero-cta">
-                        <a href="signup.html" class="btn btn-primary-custom btn-lg pulse-button">
+                    <?php if(!isset($_SESSION['user_id'])): ?>
+                        <a href="view/signup.php" class="btn btn-primary-custom btn-lg pulse-button">
                             <i class="fas fa-rocket"></i> Sign Up Now
                         </a>
+                    <?php endif; ?>
                         <a href="#how-it-works" class="btn btn-outline-custom btn-lg">
                             <i class="fas fa-play-circle"></i> Learn How It Works
                         </a>
@@ -267,20 +275,25 @@
 
     
 
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <div class="cta-icon">
-                    <i class="fas fa-rocket"></i>
-                </div>
-                <h2 class="cta-title">Ready to Start Earning?</h2>
-                <p class="cta-subtitle">Join thousands of users already earning rewards</p>
-                <a href="signup.html" class="btn btn-cta-large pulse-button">
-                    <i class="fas fa-user-plus"></i> Create Free Account
-                </a>
+
+
+<?php if(!isset($_SESSION['user_id'])): ?>
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <div class="cta-icon">
+                <i class="fas fa-rocket"></i>
             </div>
+            <h2 class="cta-title">Ready to Start Earning?</h2>
+            <p class="cta-subtitle">Join thousands of users already earning rewards</p>
+            <a href="view/signup.php" class="btn btn-cta-large pulse-button">
+                <i class="fas fa-user-plus"></i> Create Free Account
+            </a>
         </div>
-    </section>
+    </div>
+</section>
+<?php endif; ?>
+
 
     <footer class="footer-section">
         <div class="container">
@@ -310,7 +323,7 @@
                     <ul class="footer-links">
                         <li><a href="#how-it-works">How It Works</a></li>
                         <li><a href="#products">Products</a></li>
-                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="wallet.php">Dashboard</a></li>
                     </ul>
                 </div>
 
@@ -327,20 +340,15 @@
                     <h5 class="footer-heading">Contact Us</h5>
                     <ul class="footer-contact">
                         <li><i class="fas fa-envelope"></i> support@rewardzone.com</li>
-                        <li><i class="fas fa-phone"></i> +92 300 1234567</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</li>
+                        <li><i class="fas fa-phone"></i> +92 300 *******</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan</li>
                     </ul>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
+
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 RewardZone. All rights reserved.</p>
+                <p>&copy; 2025 RewardZone. All rights reserved.</p>
             </div>
         </div>
     </footer>

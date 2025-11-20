@@ -4,3 +4,4 @@ Shahzaibafridi919@gmail.com -> http://localhost/website/view/reset.php?token=19b
 Shahzaibafridi919@gmail.com -> http://localhost/website/view/reset.php?token=e27cff62b5a7b224afbeb7b125ef5ee6d66368ca94f5e4ba676440873b7fddcc
 Shahzaibafridi919@gmail.com -> http://localhost/website/view/reset.php?token=613235444386fb419fbf15bb0d1b9238f32c07e7bedf63f69a18c0dcbc7755b1
 Shahzaibafridi919@gmail.com -> http://localhost/website/view/reset.php?token=541bd5560975cd7af8e6f421d9f3b088282a9c309e537f315450d7fadbb7344b
+alpha@gmail.com -> http://localhost/website/view/reset.php?token=ab631abb41c288acbafddebdfe6166262b58d15072dbb93ab0e379a67a4a829f

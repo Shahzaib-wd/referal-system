@@ -25,8 +25,8 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="earn.html">Earn now</a></li>
-                    <li class="nav-item"><a class="nav-link" href="wallet.html">Wallet</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="earn.php">Earn now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="wallet.php">Wallet</a></li>
                     <?php if(!isset($_SESSION['user_id'])): ?>
                     <li class="nav-item"><a class="nav-link btn-login" href="/view/login.php">Login</a></li>
                     <?php endif; ?>
